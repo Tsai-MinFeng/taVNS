@@ -297,6 +297,11 @@ void disconnect_callback(uint16_t conn_handle, uint8_t reason)
   (void) conn_handle;
   (void) reason;
   connected2 = false;
+  enb_switching = false;
+  enb_taVNSmode = false;
+  enb_tDCSmode = false;
+  enb_sendData_p = false;
+  enb_sendData_n = false;
   delay(1000);
   Serial.println("Disconnected");
 }
